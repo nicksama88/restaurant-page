@@ -19,6 +19,7 @@ body {
 
 #title {
     text-align: center;
+    font-size: 3rem;
 }
 
 #nav-bar {
@@ -41,6 +42,7 @@ body {
     text-align: center;
     flex-basis: 25%;
     list-style-type: none;
+    font-size: 1.5rem;
 }
 
 #main-content {
@@ -50,6 +52,5 @@ body {
     background-size: cover;
     background-position: center;
     flex-grow: 1;
-    /* height: 400px; */
-    /* width: 100%; */
+    
 }
