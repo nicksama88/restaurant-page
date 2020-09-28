@@ -5,6 +5,7 @@ const renderHeader = () => {
     headerContainer.setAttribute('id', 'header-container');
 
     const title = document.createElement('h1');
+    title.setAttribute('id', 'title')
     title.textContent = "Nick's Izakaya";
 
     const navBar = document.createElement('ul');
