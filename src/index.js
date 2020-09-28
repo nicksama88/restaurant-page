@@ -14,3 +14,11 @@ content.appendChild(renderMain())
 // insert home content to start
 const mainContent = document.getElementById('main-content');
 mainContent.appendChild(renderHome());
+
+// function to clear all children from main content div
+const clearMain = () => {
+    while (mainContent.firstChild !== null) {
+        mainContent.removeChild(mainContent.firstChild);
+    }
+}
+
