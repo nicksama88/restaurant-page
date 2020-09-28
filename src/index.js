@@ -1,10 +1,11 @@
 // Import modules
-import renderHeader from './header'
-import renderMain from './main'
+import renderHeader from './modules/header'
+import renderMain from './modules/main'
+import renderHome from './modules/home'
+import renderAbout from './modules/about'
 
 // Import CSS
 import './assets/CSS/style.css'
-import renderHome from './home';
 
 // build initial header and page
 const content = document.getElementById('content');
@@ -22,3 +23,5 @@ const clearMain = () => {
     }
 }
 
+// clearMain();
+// mainContent.appendChild(renderAbout())
