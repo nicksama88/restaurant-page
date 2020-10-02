@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: 'Kosugi Maru', sans-serif;
 }
 
 body {
@@ -19,7 +20,7 @@ body {
 
 #title {
     text-align: center;
-    font-size: 3rem;
+    font-size: 3.5rem;
 }
 
 #nav-bar {
@@ -38,12 +39,11 @@ body {
 
 #nav-bar > li {
     padding: 16px 0px;
-    /* margin: 0px 1px; */
     flex: 1;
     text-align: center;
     flex-basis: 25%;
     list-style-type: none;
-    font-size: 1.5rem;
+    font-size: 2rem;
     border-radius: 10px 10px 0px 0px;
     outline: rgb(42, 42, 42) 2px solid;
 }
@@ -82,5 +82,5 @@ h2, h3 {
 #img-natto {
     width: 400px;
     height: auto;
-    box-shadow: rgb(42, 42, 42) 5px -5px;
+    box-shadow: rgb(42, 42, 42) 10px 10px 5px;
 }
