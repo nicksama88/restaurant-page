@@ -78,3 +78,9 @@ h2, h3 {
 .selected {
     background-color: #111;
 }
+
+#img-natto {
+    width: 400px;
+    height: auto;
+    box-shadow: rgb(42, 42, 42) 5px -5px;
+}
