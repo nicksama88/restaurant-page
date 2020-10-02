@@ -84,3 +84,44 @@ h2, h3 {
     height: auto;
     box-shadow: rgb(42, 42, 42) 10px 10px 5px;
 }
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+form > button, input, textarea{
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+
+input {
+    width: 35%;
+    /* flex-basis: 40%; */
+    margin: 20px 2.5%;
+    height: 40px;
+}
+
+@media (max-width: 1000px) {
+    input {
+        width: 75%
+    }
+}
+
+textarea {
+    width: 75%;
+    margin: 20px;
+    padding: 5px;
+}
+
+button {
+    width: 75%;
+    height: 60px;
+    margin: 20px;
+}
+
+#message {
+    height: 200px;
+    text-align: start;
+}
