@@ -53,7 +53,7 @@ for (let i = 0; i < navBarTabs.length; i++) {
                 break;
             
             case 'menu':
-                mainContent.appendChild(renderMenu());
+                mainContent.appendChild(renderMenu(menuList));
                 break;
             
             case 'about':
@@ -69,3 +69,36 @@ for (let i = 0; i < navBarTabs.length; i++) {
         };
     });
 };
+
+// create menu items to be used in renderMenu
+const MenuItem = (item, price, desc) => {
+    return {item, price, desc}
+}
+
+const MenuCategory = (name, items) => {
+    return {name, items};
+}
+
+
+let menuList = [
+    MenuCategory('Appetizers', [
+        MenuItem('Agedashi Tofu', 5.95, 'Deep fried tofu served in tempura sauce, garnished with bonito flakes and green onions'),
+        MenuItem('Calimari', 7.95, 'Lightly battered and fried squid, served with citris aoli'),
+        MenuItem('Deep-Fried Oysters', 5.95, 'panko-breaded deep-fried oysters')
+    ]),
+    MenuCategory('Salads', [
+        MenuItem('Sunomono', 6.50, 'Pickled cucumber and wakame seaweed salad'),
+        MenuItem('Seaweed Salad', 5.95, 'Seaweed in seasame oil along with other seasonings, topped with sesame seeds'),
+        MenuItem('House Salad', 5.95, 'Mixed greens accompained by a miso-sesame dressing')
+    ]),
+    MenuCategory('Entrees', [
+        MenuItem('Teriyaki Salmon', 11.95, 'Broiled salmon with teriyaki sauce. Includes miso soup and rice'),
+        MenuItem('Tonkatsu', 11.95, 'Panko-breaded and deep-fried pork cutlet with katsu sauce. Includes miso soup and rice'),
+        MenuItem('Tofu Stir-Fry', 9.95, 'Fried tofu stir-fried with mixed vegetables. Includes miso soup and white rice ')
+    ]),
+    MenuCategory('Rolls', [
+        MenuItem('California Roll', 5.95, 'Imitation crab, avocado, cucumber, tobiko, mayo'),
+        MenuItem('Caterpillar Roll', 12.95, 'Eel roll covered with avocado, tobiko and unagi sauce'),
+        MenuItem('Spicy Tuna Roll', 5.95, 'Spicy!!! minced tuna, sriracha and chili oil')
+    ])
+];
