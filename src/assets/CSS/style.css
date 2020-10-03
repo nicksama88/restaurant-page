@@ -125,3 +125,32 @@ button {
     height: 200px;
     text-align: start;
 }
+
+.menu-section-title {
+    margin: 50px;
+}
+
+.menu-item {
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.menu-item-name, .menu-item-price{
+    flex-basis: 50%;
+}
+
+.menu-item-name, .menu-item-desc {
+    text-align: left;
+}
+
+.menu-item-price {
+    text-align: right;
+}
+
+.menu-item-desc {
+    font-size: 1.5rem;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}

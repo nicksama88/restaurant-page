@@ -26,7 +26,7 @@ const renderMenu = (menuList) => {
             itemName.textContent = menuList[i].items[j].item;
             let itemPrice = document.createElement('span');
             itemPrice.classList.add('menu-item-price');
-            itemPrice.textContent = menuList[i].items[j].price;
+            itemPrice.textContent = '$' + menuList[i].items[j].price.toFixed(2);
             let itemDesc = document.createElement('p');
             itemDesc.classList.add('menu-item-desc');
             itemDesc.textContent = menuList[i].items[j].desc;
