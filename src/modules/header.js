@@ -5,7 +5,7 @@ const renderHeader = () => {
     headerContainer.setAttribute('id', 'header-container');
 
     const title = document.createElement('h1');
-    title.setAttribute('id', 'title')
+    title.setAttribute('id', 'title');
     title.textContent = "Nick's Izakaya";
 
     const navBar = document.createElement('ul');
@@ -13,7 +13,7 @@ const renderHeader = () => {
 
     // creating menu options
     let nameList = ['home', 'menu', 'about', 'contact']
-    nameList.forEach(element => {
+    nameList.map( element => {
         let li = document.createElement('li');
         li.textContent = element;
         li.setAttribute('id', element);

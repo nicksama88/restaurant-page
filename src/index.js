@@ -12,11 +12,12 @@ import './assets/CSS/style.css'
 // build initial header and page
 const content = document.getElementById('content');
 content.appendChild(renderHeader());
-content.appendChild(renderMain())
+content.appendChild(renderMain());
 
-// insert home content to start
+// insert home content to start and highlight tab
 const mainContent = document.getElementById('main-content');
 mainContent.appendChild(renderHome());
+document.getElementById('home').classList.add('selected');
 
 // function to clear all children from main content div
 const clearMain = () => {
@@ -27,17 +28,16 @@ const clearMain = () => {
 
 // function to clear tab selection
 const clearTabSelection = () => {
-    let tabs = document.querySelectorAll('li');
-    for (let i = 0; i < tabs.length; i++) {
-        tabs[i].classList.remove("selected");
-    };
+    let tabs = Array.from(document.querySelectorAll('li'));
+    tabs.map( element => {
+        element.classList.remove('selected');
+    });
 };
 
-const navBarTabs = document.querySelector('#nav-bar').children;
+const navBarTabs = Array.from(document.querySelector('#nav-bar').children);
 
 // add eventListeners for all tabs, for loading new pages and highlighting choice
-for (let i = 0; i < navBarTabs.length; i++) {
-    let tab = navBarTabs[i];
+navBarTabs.map( tab => {
     tab.addEventListener('click', (event) => {
         clearMain();
         clearTabSelection();
@@ -68,7 +68,7 @@ for (let i = 0; i < navBarTabs.length; i++) {
                 console.log("Something went wrong in tab switch statement");
         };
     });
-};
+});
 
 // create menu items to be used in renderMenu
 const MenuItem = (item, price, desc) => {

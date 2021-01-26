@@ -8,36 +8,36 @@ const renderMenu = (menuList) => {
     mainDiv.appendChild(h1);
 
     // create items from menuList
-    for (let i = 0; i < menuList.length; i++) {
+    menuList.map( element => {
 
         let sectionDiv = document.createElement('div');
         sectionDiv.classList.add('menu-section');
         let h = document.createElement('h3');
-        h.classList.add('menu-section-title')
-        h.textContent = menuList[i].name;
+        h.classList.add('menu-section-title');
+        h.textContent = element.name;
         sectionDiv.appendChild(h);
 
-        for (let j = 0; j < menuList[i].items.length; j++) {
+        element.items.map( subElement => {
 
             let itemDiv = document.createElement('div');
             itemDiv.classList.add('menu-item');
             let itemName = document.createElement('span');
             itemName.classList.add('menu-item-name');
-            itemName.textContent = menuList[i].items[j].item;
+            itemName.textContent = subElement.item;
             let itemPrice = document.createElement('span');
             itemPrice.classList.add('menu-item-price');
-            itemPrice.textContent = '$' + menuList[i].items[j].price.toFixed(2);
+            itemPrice.textContent = '$' + subElement.price.toFixed(2);
             let itemDesc = document.createElement('p');
             itemDesc.classList.add('menu-item-desc');
-            itemDesc.textContent = menuList[i].items[j].desc;
+            itemDesc.textContent = subElement.desc;
             itemDiv.append(itemName, itemPrice, itemDesc);
             sectionDiv.appendChild(itemDiv);
 
-        }
+        });
 
         mainDiv.appendChild(sectionDiv);
 
-    }
+    });
 
     return mainDiv;
 }

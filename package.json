@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Nick Haury",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "url-loader": "^4.1.0",
     "webpack": "^4.44.2",
